@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "name": "Иван Иванов",
+  "email": "ivan.ivanov@example.com",
+  "skills": [
+    "Java",
+    "SQL",
+    "Git"
+  ],
+  "relation": [
+    {
+      "id": 2,
+      "name": "Петр Иванов",
+      "status": "брат"
+    },
+    {
+      "id": 3,
+      "name": "Анастасия Иванова",
+      "status": "сестра"
+    }
+  ]
+}
