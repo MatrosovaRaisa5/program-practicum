@@ -1,7 +1,7 @@
 package com.example.lab3.controller;
 
 import com.example.lab3.dto.ExtractRequest;
-import com.example.lab3.service.DataProcessingService;
+import com.example.lab3.service.InMemoryDataProcessingService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ class DataExtractorControllerTest {
     private ObjectMapper objectMapper;
 
     @MockBean
-    private DataProcessingService dataProcessingService;
+    private InMemoryDataProcessingService dataProcessingService;
 
     @Test
     void testExtractSuccess() throws Exception {

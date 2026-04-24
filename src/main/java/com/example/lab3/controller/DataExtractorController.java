@@ -1,11 +1,12 @@
 package com.example.lab3.controller;
 
+import com.example.lab3.service.DataProcessingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.example.lab3.dto.ExtractRequest;
 import com.example.lab3.dto.ExtractResponse;
-import com.example.lab3.service.DataProcessingService;
+import com.example.lab3.service.InMemoryDataProcessingService;
 
 @RestController
 @RequestMapping("/api/data")

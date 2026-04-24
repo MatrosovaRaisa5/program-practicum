@@ -10,22 +10,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class DataProcessingServiceTest {
 
     @Autowired
-    private DataProcessingService dataProcessingService;
+    private InMemoryDataProcessingService dataProcessingService;
 
 
     @Test
     void testCorrectExtractorIsChosen() throws Exception {
-        // JSON
+        // для json
         String jsonData = "{ \"user\": { \"name\": \"Alex\" } }";
         String jsonResult = dataProcessingService.process("json", jsonData, "user/name");
         assertEquals("Alex", jsonResult);
 
-        // XML
+        // для xml
         String xmlData = "<root><user><name>Alex</name></user></root>";
         String xmlResult = dataProcessingService.process("xml", xmlData, "/user/name");
         assertEquals("Alex", xmlResult);
 
-        // YAML
+        // для yaml
         String yamlData = "user:\n  name: Alex";
         String yamlResult = dataProcessingService.process("yaml", yamlData, "user/name");
         assertEquals("Alex", yamlResult);
